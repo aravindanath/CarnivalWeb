@@ -1,6 +1,8 @@
 package TestNg;
 
 
+import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -22,7 +24,7 @@ public class TestAnnotation4 extends  BaseClass{
     @Test
     public void addtoCard() {
 
-        Assert.fail();
+        AssertJUnit.fail();
         System.out.println("add to cart");
     }
 

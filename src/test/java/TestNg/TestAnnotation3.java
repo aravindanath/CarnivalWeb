@@ -1,6 +1,7 @@
 package TestNg;
 
 
+import org.testng.annotations.Test;
 import net.bytebuddy.implementation.bytecode.Throw;
 import org.testng.SkipException;
 import org.testng.annotations.Test;
