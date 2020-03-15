@@ -10,7 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.testng.annotations.*;
 
-import ReUsables.*;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class LaunchBrowserUsingWebDriverManager {
@@ -19,7 +18,7 @@ public class LaunchBrowserUsingWebDriverManager {
 
 	@BeforeClass
 	public void setup() throws IOException {
-		String browser = BaseClass.getValue("browser");
+		String browser = "chrome";
 		if (browser.equalsIgnoreCase("chrome")) {
 			// https://sites.google.com/a/chromium.org/chromedriver/capabilities
 			//https://www.guru99.com/chrome-options-desiredcapabilities.html

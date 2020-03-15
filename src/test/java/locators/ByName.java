@@ -13,9 +13,10 @@ public class ByName  extends LaunchBrowserUsingWebDriverManager{
 	public void search() throws InterruptedException {
 		
 		driver.get("https://www.google.in");
+
+		driver.findElement(By.name("q")).sendKeys("selenium jobs for 2yrs exp",Keys.ENTER);
 		
-		
-		driver.findElement(By.name("q")).sendKeys("Delhi republic day cel",Keys.ENTER);
 		Thread.sleep(2000);
+
 	}
 }
