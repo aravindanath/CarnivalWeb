@@ -16,19 +16,15 @@ public class ByXpathUsingContains extends LaunchBrowserUsingWebDriverManager {
 		driver.get("https://www.amazon.in/");
 		driver.findElement(By.xpath("//a[contains(text(),'Tod')]")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//span[contains(text(),'Appliances')]")).click();
-		Thread.sleep(5000);
-		
-		List<WebElement>deal =driver.findElements(By.xpath("//div[@id='widgetContent']/div"));
-		
-		System.out.println("Total no of deals "+ deal.size());
-		Thread.sleep(2000);
-		deal.get(10).click();
-		Thread.sleep(2000);
-//		for(WebElement ele : deal) {
-//			System.out.println(ele.);
-//		}
 
+		driver.findElement(By.xpath("//span[contains(text(),'Refurbished & Open Box')]")).click();
+		Thread.sleep(2000);
+
+
+		driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']")).sendKeys("iphone 11 pro");
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//input[contains(@type,'submit')]")).click();
+		Thread.sleep(2000);
 	}
 
 }

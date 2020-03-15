@@ -11,9 +11,14 @@ public class ByPartialLinkText  extends LaunchBrowserUsingWebDriverManager{
 	
 	@Test
 	public void search() throws InterruptedException {
-		
+
 		driver.get("https://www.google.in");
 		driver.findElement(By.partialLinkText("Ima")).click();
-		driver.findElement(By.name("q")).sendKeys("Delhi republic day cel",Keys.ENTER);
+		Thread.sleep(2000);
+
+		driver.findElement(By.name("q")).sendKeys("Bangalore city",Keys.ENTER);
+		Thread.sleep(2000);
+
 	}
+
 }

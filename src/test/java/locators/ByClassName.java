@@ -14,7 +14,12 @@ public class ByClassName extends LaunchBrowserUsingWebDriverManager {
 		driver.get("https://www.icicibank.com/");
 
 		driver.findElement(By.className("pl-login-ornage-box")).click();
-		
+
 		Thread.sleep(2000);
+
+
+
+
 	}
+
 }

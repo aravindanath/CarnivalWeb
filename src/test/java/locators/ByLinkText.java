@@ -12,8 +12,8 @@ public class ByLinkText  extends LaunchBrowserUsingWebDriverManager{
 	@Test
 	public void search() throws InterruptedException {
 		
-		driver.get("https://www.google.in");
-		driver.findElement(By.linkText("Images")).click();
-		driver.findElement(By.name("q")).sendKeys("Delhi republic day cel",Keys.ENTER);
-	}
-}
+		driver.get("https://www.wikipedia.org/");
+
+		driver.findElement(By.linkText("Wikimedia Foundation")).click();
+
+}}
