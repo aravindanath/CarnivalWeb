@@ -11,8 +11,8 @@ public class ByCSSID extends LaunchBrowserUsingWebDriverManager {
 
 	@Test
 	public void absXpath() throws InterruptedException {
-		driver.get("htts://www.amazon.com");
-		driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("ipad", Keys.ENTER);
+		driver.get("https://www.amazon.com");
+		driver.findElement(By.cssSelector("#twotabsearchtextbox")).sendKeys("ipad pro 2020",Keys.ENTER);
 
 	}
 

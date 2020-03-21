@@ -14,7 +14,7 @@ public class ByXpathUsingPreceding extends LaunchBrowserUsingWebDriverManager {
 		driver.get("http://the-internet.herokuapp.com/tables");
 		Thread.sleep(2000);
 
-		String xpath = "//table[@id='table1']/tbody/tr/td[4][contains(text(),'$100.00')]//preceding::td[1]";
+		String xpath = "//table[@id='table1']/tbody/tr/td[4][contains(text(),'$100.00')]//preceding::td[3]";
 		
 		WebElement lname = driver.findElement(
 				By.xpath(xpath));

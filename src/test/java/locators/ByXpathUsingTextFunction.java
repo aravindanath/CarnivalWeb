@@ -12,6 +12,10 @@ public class ByXpathUsingTextFunction extends LaunchBrowserUsingWebDriverManager
 	public void absXpath() throws InterruptedException {
 		driver.get("https://www.amazon.in/");
 		driver.findElement(By.xpath("//a[text()='New Releases']")).click();
+		/*
+		//a[text()='New Releases']
+		//a[contains(text(),'New Rele')]
+		 */
 		Thread.sleep(2000);
 	}
 

@@ -14,12 +14,13 @@ public class ByXpathUsingFollowing2 extends LaunchBrowserUsingWebDriverManager {
 		driver.get("http://the-internet.herokuapp.com/tables");
 		Thread.sleep(2000);
 		
-		String lName = "//table[@id='table1']/tbody/tr/td[1][contains(text(),'LNAME')]//following::td[4]".replace("LNAME", "Smith");
-		String website = driver
-				.findElement(
-						By.xpath(lName))
-				.getText();
-		System.out.println("WebSite " + website);
+
+		String xpath ="//table[@id='table1']/tbody/tr/td[contains(text(),'FNAME')]//following::td[3]".replace("FNAME","Jason");
+
+		String web = driver.findElement(By.xpath(xpath)).getText();
+
+		System.out.println(web);
+
 
 	}
 
