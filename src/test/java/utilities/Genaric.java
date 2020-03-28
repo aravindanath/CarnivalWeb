@@ -1,9 +1,6 @@
 package utilities;
 
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
@@ -94,6 +91,71 @@ public class Genaric {
     }
 
 
+    public static void clickAction(WebDriver driver, WebElement ele){
+        Actions act = new Actions(driver);
+       act.click(ele).build().perform();
+    }
+
+    public static void dragNDrop(WebDriver driver, WebElement src, WebElement tgt ){
+        Actions act = new Actions(driver);
+        act.dragAndDrop(src,tgt).build().perform();
+    }
 
 
+    public static void rightClick(WebDriver driver, WebElement tgt ){
+        Actions act = new Actions(driver);
+        act.contextClick(tgt).build().perform();
+    }
+
+
+    public static void switchToFrame(WebDriver driver, String frameName){
+
+        driver.switchTo().frame(frameName);
+    }
+
+
+
+    public static int usdInr(String doller){
+        String price = doller.replace("$","").replace(",","");
+
+        if (doller.contains( ".")){
+        String    doll =  doller.split(".")[0];
+        }
+        int  doll = Integer.parseInt(price);
+        int rs = doll*75;
+        return rs;
+    }
+
+
+
+
+    public void littleScrollVertical(WebDriver driver, String num){
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy(0, "+num+");");
+    }
+
+
+    public void littleScrollHorizontal(WebDriver driver, String num){
+        ((JavascriptExecutor) driver).executeScript("window.scrollBy( "+num+",0);");
+    }
+//scrollHeight
+
+    public void  ScrollTillEnd(WebDriver driver){
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollHeight");
+    }
+
+
+    public static void jsClick(WebDriver driver, WebElement ele) {
+
+        ((JavascriptExecutor) driver).executeScript("arguments[0].click();", ele);
+
+    }
+
+    public static void scrollTillElement(WebDriver driver,WebElement element) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+
+    }
+
+    public static void highlightElement(WebDriver driver,WebElement element,String colour) {
+        ((JavascriptExecutor) driver).executeScript("arguments[0].style.border='5px solid "+colour.toLowerCase()+"'", element);
+    }
 }

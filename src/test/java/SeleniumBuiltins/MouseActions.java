@@ -24,7 +24,10 @@ public class MouseActions extends LaunchChromeUseingWebDriverManager {
 
         WebElement ele = driver.findElement(By.xpath("(//a[text()='Women'])[1]"));
         WebElement kid = driver.findElement(By.xpath("(//a[text()='Kids'])[1]"));
+        WebElement ethinic = driver.findElement(By.xpath("//a[text()='Ethnic wear']"));
         Thread.sleep(2000);
+        Genaric.rightClick(driver,ele);
+
 
         Actions act = new Actions(driver);
 
@@ -32,6 +35,11 @@ public class MouseActions extends LaunchChromeUseingWebDriverManager {
         Thread.sleep(2000);
 
         Genaric.mouseHover(driver,kid);
+
+
+       Genaric.clickAction(driver,ethinic);
+
+
 
         Thread.sleep(2000);
 
