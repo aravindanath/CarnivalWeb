@@ -6,13 +6,15 @@ scroll - done
 dropdown - done
 autosuggest - done
 calender - done
+SSLCertificate -- done
+pagination - done
 
-pagination
-JDBC
-Waits
 File upload , Download (Auto it)
+
 Radio button
 CB
+JDBC
+Waits
 cloud execution
 multiselect
 cloud exction (grid)
