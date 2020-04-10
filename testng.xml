@@ -1,16 +1,2 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <listeners>
-    <listener class-name="TestNg.RepoList" />
-  </listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="TestNg.TestAnnotation4"/>
-      <class name="TestNg.TestAnnotation3"/>
-      <class name="TestNg.TestAnnotation"/>
-      <class name="TestNg.TestAnnotations2"/>
-      <class name="TestNg.TestAnnotation1"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd"><suite name="All Test Suite"><test verbose="2" preserve-order="true" name="/Users/aravindanathdm/eclipse-workspace/CarnivalWebAutomation/src/test/java/testScripts/Tc001.java"><classes><class name="testScripts.Tc001"><methods><include name="Tc001"/></methods></class></classes></test><test verbose="2" preserve-order="true" name="/Users/aravindanathdm/eclipse-workspace/CarnivalWebAutomation/src/test/java/testScripts/Tc002.java"><classes><class name="testScripts.Tc002"><methods><include name="Tc002"/></methods></class></classes></test></suite>

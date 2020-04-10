@@ -18,6 +18,11 @@ public class LaunchBrowserUsingWebDriverManager {
 
 	@BeforeClass
 	public void setup() throws IOException {
+
+
+
+
+
 		String browser = "chrome";
 		if (browser.equalsIgnoreCase("chrome")) {
 			// https://sites.google.com/a/chromium.org/chromedriver/capabilities
@@ -38,7 +43,7 @@ public class LaunchBrowserUsingWebDriverManager {
 			driver = new FirefoxDriver();
 		}
 		driver.manage().window().fullscreen();
-		driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(40,TimeUnit.SECONDS);
 
 	}
 
